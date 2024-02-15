@@ -7,4 +7,46 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+main {
+  margin: 1rem;
+}
+
+p {
+  font-size: 32px;
+  border: 1px solid;
+  padding: 2rem;
+}
+
+i {
+  color: blue;
+}
+
+.parole:nth-child(1) {
+  transform: translateZ(200px);
+  animation: parole 2s;
+  transition: opacity 1s;
+}
+
+.parole:nth-child(2) {
+  transform: translateZ(200px);
+  animation: parole 4s;
+  transition: opacity 2s;
+}
+
+.parole:nth-child(3) {
+  transform: translateZ(200px);
+  animation: parole 6s;
+  transition: opacity 3s;
+}
+
+@keyframes parole {
+  from {
+    opacity: 0;
+  }
+}

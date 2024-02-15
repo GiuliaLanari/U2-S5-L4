@@ -24,7 +24,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  animation: attacarePostit 5s 3s both;
 }
 
 .postit {
@@ -39,6 +38,7 @@ h1 {
   justify-content: center;
   box-shadow: 8px 8px 21px -2px black;
   transition: all 0.5s;
+  animation: attacarePostit 3s 1s backwards;
 }
 
 h2,
@@ -81,10 +81,45 @@ p {
   transition-delay: 0.25s;
 }
 
+.prima {
+  animation-delay: 0s;
+}
+
+.secondo {
+  animation-delay: 0.6s;
+}
+
+.terzo {
+  animation-delay: 0.9;
+}
+
+.quarto {
+  animation-delay: 1.2s;
+}
+
+.quinto {
+  animation-delay: 1.4;
+}
+
+.sesto {
+  animation-delay: 1.6s;
+}
+
+.settimo {
+  animation-delay: 1.8s;
+}
+
+.ottavo {
+  animation-delay: 2s;
+}
+
 @keyframes attacarePostit {
-  0% {
+  from {
+    transform: perspective(500px) translateZ(200px);
     opacity: 0;
   }
-  10% {
+
+  to {
+    transform: perspective(500px) translateZ(0px);
   }
 }
