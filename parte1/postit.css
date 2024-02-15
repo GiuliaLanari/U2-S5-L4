@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: black;
+  font-family: "Indie Flower";
+}
+
+h1 {
+  text-align: center;
+  margin-block: 2rem;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.box-lavagna {
+  height: 50rem;
+  padding: 3rem;
+  background-color: grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: attacarePostit 5s 3s both;
+}
+
+.postit {
+  height: 18rem;
+  width: 23rem;
+  margin-block: 2.5rem;
+  margin-inline: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 8px 8px 21px -2px black;
+  transition: all 0.5s;
+}
+
+h2,
+p {
+  color: black;
+  margin-block-end: 1rem;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 40px;
+}
+
+.giallo {
+  background-image: linear-gradient(180deg, #f8f8c6 65%, #00000002);
+  transform: rotate(354deg);
+}
+
+.verde {
+  background-image: linear-gradient(180deg, #c8f8ca 65%, #00000001);
+  transform: rotate(6deg);
+}
+
+.blu {
+  background-image: linear-gradient(180deg, #c8c8f6 65%, #00000001);
+  transform: rotate(349deg);
+}
+
+.verde-diverso {
+  background-image: linear-gradient(180deg, #c8f8ca 65%, #00000001);
+  transform: rotate(15deg);
+}
+
+.postit:hover {
+  transform: perspective(100px) translateZ(20px);
+  transition-delay: 0.25s;
+}
+
+@keyframes attacarePostit {
+  0% {
+    opacity: 0;
+  }
+  10% {
+  }
+}
